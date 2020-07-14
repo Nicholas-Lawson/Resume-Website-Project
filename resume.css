@@ -1,0 +1,201 @@
+
+/* RESUME CSS */
+
+/*Custom imported fonts*/
+
+@font-face
+{
+	font-family: Simplician;
+	src: url(CelinePeachSans.otf);
+}
+
+@font-face
+{
+	font-family: Numeratus;
+	src: url(GeosansLight.ttf);
+	font-weight: bold;
+}
+
+/*HTML tag rules*/
+
+a
+{
+	border: .05em solid black;
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	padding:  0em .1em 0em 0.1em;
+}
+
+a:hover, a:active
+{
+	background-color: black;
+	color: #d9e2d2;
+}
+
+body
+{
+		background-color: #d9e2d2;
+		background-image: linear-gradient(0deg, #d9e2d2 0%, #2AF598 100%);
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-left: 7em;
+		margin-right: 7em;
+		margin-top: 2em;
+}
+
+div
+{
+	max-width: 100%;
+}
+
+footer
+{
+	width: 100%;
+	border-top: .01em solid black;
+}
+
+p:not(.footer):not(.resume)
+{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+/*HTML class rules*/
+
+div .firstline, div .secondline , div .headline
+{
+	display: inline;
+}
+
+div .firstline:nth-child(2)
+{
+	float:left; 
+	font-family: Simplician;
+}
+div .firstline:nth-child(3)
+{	
+	float:right;
+}
+div .headline
+{
+	float:left; 
+	font-family: Simplician;
+}
+div .secondline:nth-child(4)
+{
+	float:left; 
+	font-family: Simplician; 
+	padding-top: .5em;
+}
+div .secondline:nth-child(5)
+{
+	float:right; 
+	padding-top: .5em;
+}
+
+.education, .employment, .skills, .interests, .availability
+{
+	display: flow-root;
+	padding-top: 2.5em;
+}
+
+.education p, .employment p, .skills p, .interests p, .availability p
+{
+	margin: 0;
+}
+
+.footer
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	padding-left: .45em;
+}
+
+.format-resume
+{
+	font-family: Numeratus;
+	margin: 0;
+	float: left;
+}
+
+.format-resume div p, .format-resume footer
+{
+	float: left;
+}
+
+.print
+{
+	display: none;
+}
+
+.resume
+{
+	padding-left: .45em;
+	font-family: Simplician;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding-right: .25em;
+	border-right: .01em solid black;
+}
+
+.resumeinfo
+{
+	padding-top: .5em;
+	padding-left: 14.2em;
+	float: left;
+	margin: 0;
+}
+
+.title
+{
+	margin: 0;
+	font-family: Simplician;
+	padding-left: .1em;
+	font-size: 5em;
+	border-bottom: .01em solid black;
+	width: 9em;
+	font-weight: lighter;
+}
+
+/*PRINT SETTINGS*/
+
+@media print
+{
+	
+	/*HTML tag rules - Print */
+	
+	body
+	{
+		margin: 0em;
+		width: 100%;
+	}
+	
+	footer
+	{
+		border: none;
+		font-family: numeratus;
+	}
+	
+	p:not(.header):not(.resume), .resume
+	{
+		font-size: 1em;
+	}
+	/*HTML class rules - Print */
+	
+	.noprint
+	{
+		display: none;
+	}
+	
+	.print
+	{
+		font-size: .7em;
+		display: flow-root;
+	}
+	
+	.title
+	{
+		font-size: 3.5em;
+	}
+}
